@@ -1,0 +1,89 @@
+.container.next .thumb {
+    animation: efectNextThumb 0.5s linear 1 forwards;
+}
+
+
+@keyframes efectNextThumb {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+.container.next .thumb .thumb-item:nth-last-child(1) {
+    animation: effectLastThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectLastThumb {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.container .list .list-item:nth-last-child(1) .content .title,
+.container .list .list-item:nth-last-child(1) .content .description,
+.container .list .list-item:nth-last-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.4s 0.8s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translate(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.container .list .list-item:nth-last-child(1) .content .title {
+    animation-delay: 1.1s;
+}
+
+.container .list .list-item:nth-last-child(1) .content .description {
+    animation-delay: 1.3s;
+}
+
+.container .list .list-item:nth-last-child(1) .content .buttons {
+    animation-delay: 1.5s;
+}
+
+.container.next .list .list-item:nth-last-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showMainImage 0.5s linear 1 forwards;
+
+}
+
+@keyframes showMainImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.container.back .list .list-item:nth-child(1) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: hideMainImage 0.7s linear 1 forwards;
+    z-index: 2;
+}
+
+@keyframes hideMainImage {
+    to {
+        width: 135px;
+        height: 200px;
+        border-radius: 10px;
+        left: 60%;
+        bottom: 50px;
+    }
+}
